@@ -27,3 +27,11 @@ axios，很容易被 403 限制。
 crawler，没看懂怎么去等待 queue 结束。
 
 headless-chrome-crawler，走的 chrome，而且实现上比较易理解，可以用它来试试看。
+
+# TODO
+- [] 数据库迁移到线上（mongo DB）
+- [] 挑选合适的 crawler 工具
+- [] 代码抽象
+
+# 注意
+在测试的时候，必须限频。否则很容易就被限制住了。
