@@ -1,3 +1,5 @@
+// 使用最原始的 puppeteer 来跑！
+const puppeteer = require('puppeteer')
 const HCCrawler = require('headless-chrome-crawler');
 const helper = require('./helper')
 
@@ -17,6 +19,15 @@ const COMMON_CRAWLER_CONFIG = {
   devtools: true,
   maxConcurrency: 1,
 }
+
+const jQueryPath = require.resolve('jquery');
+async function addJQuery(page) {
+  await page.addScriptTag({ path: jQueryPath });
+}
+
+// 登录就是把 cookie 存起来，每次启动的时候，再写回去就好了。
+// 使用 userDataDir 来保存。
+// 一个 browser，然后多个 page 来跑。
 
 ;(async () => {
   try {

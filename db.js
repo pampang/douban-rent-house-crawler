@@ -9,9 +9,8 @@ exports.Article = mongoose.model('Article', {
   contents: [String], // 描述列表
   images: [String], // 图片列表
   keywords: [String], // 内容关键词，可以手动添加
-  star: Boolean, // 是否收藏
-  black: Boolean, // 是否黑名单
-  isRead: Boolean, // 是否已读
-  // createAt: Number,
-  // updateAt: Number, // 根据 UpdateAt 来排序
+  isStar: { type: Boolean, default: false }, // 是否收藏
+  isBlack: { type: Boolean, default: false }, // 是否黑名单
+  isRead: { type: Boolean, default: false }, // 是否已读
+  // 当前进度
 })

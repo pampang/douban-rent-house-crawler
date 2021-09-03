@@ -17,11 +17,14 @@ const SEARCH_KEYWORDS = [
   '广州塔',
   '鹭江',
   '五羊',
+  '滨江东', // 距离很远了
+  '大塘',
 ]
 
 const ARTICLE_KEYWORDS = [
   '女生',
   '男生',
+  // '求租',
   // X房
   // 合租
 ]
